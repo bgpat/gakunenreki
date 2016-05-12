@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <title>学年暦メーカー</title>
+  </head>
+  <body>
+    <button class="login">Login</button>
+    <select class="list">
+      <option>ログインしてください</option>
+    </select>
+    <table>
+      <tbody>
+        <tr>
+          <th>前期</th>
+          <td>
+            <input type="date" class="first-start" />
+            〜
+            <input type="date" class="first-end" />
+          </td>
+        </tr>
+        <tr>
+          <th>後期</th>
+          <td>
+            <input type="date" class="second-start" />
+            〜
+            <input type="date" class="second-end" />
+          </td>
+        </tr>
+        <tr>
+          <th>休講日</th>
+          <td>
+            <label><input type="checkbox" value="土" class="rest-saturday day-6" checked />土曜日</label>
+            <label><input type="checkbox" value="日" class="rest-sunday day-0" checked />日曜日</label>
+            <label><input type="checkbox" value="祝" class="rest-holiday" checked />祝日</label>
+          </td>
+          <td>
+            <button class="rest-tempolary-button">追加</button>
+          </td>
+        </tr>
+        <tr>
+          <th>時間割変更</th>
+          <td>
+            <button class="modified-button">追加</button>
+            <select class="weekdays">
+              <option value="月" class="day-1">月曜日</option>
+              <option value="火" class="day-2">火曜日</option>
+              <option value="水" class="day-3">水曜日</option>
+              <option value="木" class="day-4">木曜日</option>
+              <option value="金" class="day-5">金曜日</option>
+            </select>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <button class="exec">実行</button>
+    <script src="https://apis.google.com/js/client.js?onload=callbackOAuth"></script>
+    <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/async/1.5.2/async.min.js"></script>
+    <script src="./main.js"></script>
+  </body>
+</html>
